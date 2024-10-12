@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend-end
+  labels:
+    name: election-be
+spec:
+  containers:
+  - name: backend-end-container
+    image: ibrahimgamal10203040/dev_backend:latest
+    ports:
+      - containerPort: 8080

@@ -1,0 +1,36 @@
+server :
+  port : ${PORT:8080}
+
+spring:
+  application:
+    name: election-app
+  level:
+    root: INFO
+    com:
+      user_service: DEBUG
+      zaxxer:
+        hikari:
+          pool:
+            HikariPool: INFO
+    httpclient:
+      wire: DEBUG
+    org:
+      springframework:
+        web:
+          servlet.DispatcherServlet: DEBUG
+          client.RestTemplate: DEBUG
+      hibernate:
+        SQL: DEBUG
+        type.descriptor.sql.BasicBinder: TRACE
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://database:5432/election}
+    username: ${DB_USERNAME:abdullahelsharkawi}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: none  # You can change this to 'update' or 'create' based on your needs
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true

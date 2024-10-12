@@ -1,0 +1,33 @@
+# Maven target directory
+/target/
+
+# Gradle build directory
+/build/
+
+# Logs
+*.log
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# Spring Boot specific
+.env
+.DS_Store
+*.jar
+*.war
+*.zip
+
+# Environment variables
+*.env
+
+# Other IDEs
+.vscode/
+.history/
+

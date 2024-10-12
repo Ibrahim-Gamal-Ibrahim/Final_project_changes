@@ -1,0 +1,16 @@
+FROM postgres:latest
+
+ENV POSTGRES_HOST_AUTH_METHOD=trust
+ENV POSTGRES_USER=abdullahelsharkawi
+ENV POSTGRES_PASSWORD=postgres
+
+RUN useradd -d /home/abdullahelsharkawi -s /bin/bash -p 12345 abdullahelsharkawi
+RUN apt update 
+RUN apt install -y systemctl
+#RUN su - abdullahelsharkawi
+USER abdullahelsharkawi
+RUN id 
+
+CMD systemctl start postgresql
+
+

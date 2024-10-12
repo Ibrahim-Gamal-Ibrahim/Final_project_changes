@@ -1,0 +1,3 @@
+1- run a postgress container and try to create a new database named election 
+2- create the postgress script included in the code 
+3- test the image on k8s
